@@ -21,6 +21,7 @@ public class InvestorDto {
     private Integer age;
     private String address;
     private String contact;
+    @OneToMany(mappedBy = "investorDTO", cascade = CascadeType.ALL)
     private List<ProductDto> products;
 
     public InvestorDto() {
